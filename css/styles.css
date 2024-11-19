@@ -1,0 +1,564 @@
+/* =============================
+   1. Reset de Estilos o Normas Globales
+   ============================= */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============================
+   2. Estilos Generales para Etiquetas HTML
+   ============================= */
+
+/* Encabezados */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #0e0d0d;
+    font-weight: 700;
+}
+
+/* Párrafos 
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0e0d0d;
+    font-weight: 400;
+}*/
+
+ul{
+    list-style: none;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+/* =============================
+   3. Clases Comunes
+   ============================= */
+
+/* =============================
+   Header
+   ============================= */
+
+header{
+    display: flex;
+    flex-wrap: wrap;/* permite que los items toman el ancho definido y loq ue no entran en la linea caigan*/
+    height: 75x;
+    justify-content: space-between;
+    background-color: rgb(49, 49, 49);     
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+}
+.header nav ul{
+    display: flex;
+    column-gap: 5px;
+    
+}
+.nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+
+}
+.left {
+    flex: 1;
+    align-items: center;
+    padding-left: 15px;
+  }
+  
+.right {
+    display: flex;
+    gap: 20px; /* espacio entre los elementos de la derecha */
+    align-items: center;
+    padding-right: 15px;
+  }
+  
+.right-item {
+    flex: 1; /*ocupa el espacio disponible*/
+  }
+
+.logo{
+    
+    height: auto;
+    padding: 10px 40px ;
+    /*flex-grow: 1; va a ocupar todo el ancno disponible*/
+}
+.menu {
+    display: flex;/*con flex los elementos van a tratar de entrar todos en una misma linea*/
+    width: 284px;
+    justify-content: center;
+    padding-right: 100px;   
+}
+
+
+/* =============================
+   Main
+   ============================= */
+.banner {
+    background: url('../imagenes/img1.png') no-repeat center center / cover;
+    color: white;
+   
+    padding: 60px 20px;
+    display: flex;
+    
+    gap: 10px; /* Espacio entre los elementos */
+
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+.text-container {
+    display: flex;
+    gap: 5px; /* Espacio entre los h2 */
+  }
+.banner h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.h2rojo{
+    color: #f00;  
+}
+.h2blanco{
+    color: white;  
+}
+
+.banner button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+/***********************************************/
+
+/**********************************************
+MAIN CENTER
+**********************************************/
+.productos-destacados{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.productos-destacados h3{
+    padding: 10px;
+    font-size: 30px;
+}
+
+.productos {
+    display: flex;
+    /*justify-content: space-around;  Distribuye los productos con espacio entre ellos */
+    gap: 25px; /* Espacio adicional entre tarjetas */
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 300px; /* Limita el ancho máximo de cada tarjeta */
+    flex: 2; /* Asegura que las tarjetas ocupen el mismo ancho */
+  }
+  
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+.producto hr {
+    width: 100%; /* Ajusta el ancho de la línea */
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 10px 0;
+    
+}
+
+.precio {
+    font-size: 20px; /* Tamaño más grande para el precio */
+    font-weight: bold; 
+    color: #333; 
+    margin: 0; 
+}
+.cuotas {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.producto div span {
+    color: green;
+    font-weight: bold;
+}
+/******************Productos Estrellas *****************************/
+
+
+.productos-estrellas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    text-align: center;
+    padding: 40px 20px;
+}
+.productos-estrellas h3{
+    padding: 10px;
+    font-size: 30px;
+}
+.estrellas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    
+}
+
+.estrella {
+    position: relative;
+    color: white;
+    width: 500px;
+    
+    width: 100%; /* Permite que el contenedor se ajuste al tamaño de su contenedor principal */
+    max-width: 500px; /* Limita el tamaño máximo */
+    height: auto; /* Hace que la altura se ajuste automáticamente */
+}
+
+.estrella img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.estrella p {
+    position: absolute; /*se posiciona en relación a su contenedor más cercano que tenga position: relative; en este caso estrella*/
+    top:50%;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    
+    
+}
+
+
+
+
+
+
+
+/**********************************************
+    FOOSTER
+**********************************************/
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.f-top{
+    background-color: rgb(49, 49, 49); 
+    display: flex;
+   /*  flex-wrap: wrap;permite que los items toman el ancho definido y loq ue no entran en la linea caigan*/
+    flex-wrap: wrap;
+   
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    font-size: 22px;  
+
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 15px;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.social-links img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+
+}
+
+
+.social-links p {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Espacio entre el texto y los íconos */
+  }
+  
+.social-links .icon-container {
+    display: flex; /* Pone los íconos en una fila */
+    gap: 10px; /* Espacio entre los íconos */
+  }
+  
+.social-links img {
+    width: 30px; /* Ajusta el tamaño de los íconos */
+    height: auto;
+  }
+
+/**/
+
+.f-bottom{
+    display: flex;
+    justify-content: center; /* Centra horizontal el contenido */
+    background-color: #ca6206;
+    color: white; 
+    padding: 5px;
+    font-size: 18px;    
+}
+
+/* Contact section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #3A2108;
+    padding: 10px 10px 10px 80px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.contact-item i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #BFBFBF;
+}
+
+.contact-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #BFBFBF;
+}
+.f-logo{
+    display: flex;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+/**********************************************
+    MEDIA QUERIES
+**********************************************/
+/*
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-center {
+        background-color: rgb(49, 182, 226);
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    form {
+        background-color: rgb(49, 182, 226);
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        max-width: 800px;
+    }
+}
+*/
+
+/* Estilos para pantallas medianas  */
+@media (max-width: 768px) {
+
+    body {
+        background-color: rgb(49, 182, 226);
+    }
+    header, .productos, .productos-estrellas, .footer, .contact-section {
+      flex-direction: column; /* Cambia la orientación a columna para mejor adaptación */
+    }
+  
+    .nav a, .social-links img {
+      font-size: 14px; /* Ajusta tamaño de texto y botones */
+    }
+  
+    .social-links p {
+      font-size: 12px; /* Reduce el tamaño del texto en redes sociales */
+    }
+  
+    .productos {
+      gap: 15px; /* Reduce el espacio entre productos */
+    }
+  
+    .estrella {
+      max-width: 300px; /* Reduce el ancho máximo para mejor ajuste */
+    }
+  }
+  
+  /* Estilos para pantallas pequeñas  */
+  @media (max-width: 480px) {
+    .banner {
+      padding: 40px 10px;
+    }
+  
+    .header nav ul {
+      flex-direction: column; /* Coloca los enlaces del menú en columna */
+      row-gap: 5px; /* Agrega espacio entre los elementos en columna */
+    }
+  
+    .productos, .productos-estrellas, .f-top, .f-bottom {
+      padding: 10px; /* Reduce el padding para optimizar espacio */
+      gap: 10px; /* Espacio reducido entre los elementos */
+    }
+  
+    .producto {
+      max-width: 100%; /* Permite que las tarjetas ocupen todo el ancho disponible */
+    }
+  
+    .footer, .social-links {
+      flex-direction: column; /* Acomoda en columna en pantallas pequeñas */
+    }
+  
+    .social-links img {
+      width: 20px; 
+    }
+  
+    .estrella p {
+      font-size: 70%; 
+    }
+  }
+
+
+
+/******************sin usos****************************************************************************/
+
+.tarjetas {
+    display: flex;
+    justify-content: space-around;/*distribuye las tarjetas con espacio igual entre ellas*/
+    align-items: stretch; /*todas las tarjetas tengan la misma altura, si el contenido varía.*/
+    gap: 20px;
+    flex-wrap: wrap;/*ajusten en una nueva línea si el espacio disponible es insuficiente.*/
+  }
+
+  .tarjeta {
+    background-color: rgb(224, 221, 221);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex; /* Hace que el contenido dentro de la tarjeta sea flexible */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+    /*align-items: center;  Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+  }
+
+  .tarjeta img {
+    width: 100%; /* La imagen ocupa el ancho completo de la tarjeta */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Opcional: redondea los bordes de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    padding-bottom: 5px;
+  }
+
+  .tarjeta p{
+    color: rgb(255, 146, 3);
+  }
+/**********************************************
+    formulario
+**********************************************/
+
+
+
+.formmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+form h2{
+ color: darkgoldenrod;
+ padding: 20px;
+}
+
+.formmain input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 30%; /* Hace que los inputs ocupen el 20% del contenedor */
+    background-color: #823d00; /* Color de relleno */
+    color: #ffffff; /* Color del texto del input */
+    font-weight: 700;
+
+}
+input::placeholder {
+    color: #ffffff; /* Color del texto del placeholder */
+    font-style: italic; /* Opcional */
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.formmain button {
+    padding: 10px 40px; /* Aumenta el relleno para agrandar el botón */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.formmain button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 20px; /* Espacio entre los botones */
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
